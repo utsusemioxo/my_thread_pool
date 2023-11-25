@@ -31,7 +31,7 @@ public:
   void Start(int numThreads) {
     m_running = true;
 
-    for (int i = 0; i < 0; ++i) {
+    for (int i = 0; i < numThreads; ++i) {
       m_threadgroup.push_back(
           std::make_shared<std::thread>(&ThreadPool::RunInThread, this));
     }
